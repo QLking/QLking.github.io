@@ -8,6 +8,21 @@
 
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<!--<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>md5 -->
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '{{ site.gitalk.clientID }}',
+    clientSecret: '{{ site.gitalk.clientSecret }}',
+    repo: '{{ site.gitalk.repo }}',
+    owner: '{{ site.gitalk.owner }}',
+    admin: ['{{ site.gitalk.owner }}'],
+    id: '{{ page.url }}',
+    distractionFreeMode: false
+  });
+  gitalk.render('gitalk-container');
+</script>
+<!--
 <script type="text/javascript">
       var gitalk = new Gitalk({
         clientID: '{{ site.gitalk.clientID }}',
@@ -15,14 +30,16 @@
         repo: '{{ site.gitalk.repo }}',
         owner: '{{ site.gitalk.owner }}',
         admin: ['{{ site.gitalk.owner }}'],
-        id: '{{ page.url }}',
+        id: '{{ page.url }}',//md5('{{ page.url }}'),//md5(location.pathname)
+        //title: document.title,//
+        //body:  '文章链接：'+ decodeURIComponent(location.origin+location.pathname),//
         labels: ['gitalk'],
         perPage: 50,
-        distractionFreeMode: true
+        distractionFreeMode: false
       });
       gitalk.render('gitalk-container');
 </script>
-
+-->
 {% endif %}
 
 {% endunless %}

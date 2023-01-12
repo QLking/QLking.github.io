@@ -176,4 +176,23 @@
       {% endif %}
 
     </div>
+
+
+    <!-- add lh  form  copy -->
+    <div class="sidebar-inner">
+      <section class="site-overview sidebar-panel{% unless display_toc and toc.size > 1 %} sidebar-panel-active{% endunless %}">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="{{ site.wechat_subscriber.qcode }}"
+               alt="{{ site.author }}" />
+          <p class="site-author-name" itemprop="name"></p>
+
+          <p class="site-description motion-element" itemprop="description"></p>
+
+          <p class="site-description motion-element" itemprop="description"></p>
+
+        </div>
+      </section>
+    </div>
+    <!-- add lh  form  copy  end-->
   </aside>

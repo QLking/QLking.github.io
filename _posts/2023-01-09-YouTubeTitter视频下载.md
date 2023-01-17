@@ -17,7 +17,7 @@ tags:
 ## **二、链接**
 网站链接：[点击进入](https://v.hi.sy)
 
-![](/assets/images/videodown.jpg)
+![](/assets/images/video.png)
 
 
 
